@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseExam"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/MCQSubjectName"
+        android:hint="Enter professor name :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/MCQExamMinutes"
+        android:hint="Enter subject name :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/check"
+        android:text="Choose exam"
+        android:layout_marginTop="18dp"
+        android:textColor="#000"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

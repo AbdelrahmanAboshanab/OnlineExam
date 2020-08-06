@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaF">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+    android:id="@+id/subjectName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter subject name : "/>
+    <EditText
+        android:id="@+id/examMinutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subjectName"
+        android:hint="Enter exam minutes : "/>
+
+    <EditText
+        android:id="@+id/edQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Question :"
+        android:layout_below="@id/examMinutes"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/edQ"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter answer please : "
+            android:layout_margin="5dp"
+            android:textColor="#000000"/>
+        <RadioButton
+            android:id="@+id/truee"
+            android:text="True"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edQ"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            />
+        <RadioButton
+            android:id="@+id/falsee"
+            android:text="False"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/truee"
+            android:layout_below="@id/edQ"
+            android:layout_margin="5dp"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn"
+        android:text="Add question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:text="Submit Exam"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit"/>
+    <LinearLayout
+        android:id="@+id/noExam"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:text="There is no exams right now !! \n please open on the time of the exam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>

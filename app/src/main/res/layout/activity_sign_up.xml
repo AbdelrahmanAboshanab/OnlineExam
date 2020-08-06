@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:id="@+id/instructions"
+        android:text=" Your secret number is in the  bottom of your collegde card.
+\n your password which you will  use to login later."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:fontFamily="serif-monospace"
+        android:elegantTextHeight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/code"
+        android:hint=" Enter your code : "
+        android:inputType="number"
+        android:layout_below="@id/instructions"
+        />
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/id"
+        android:hint=" Enter your national ID : "
+        android:inputType="number"
+        android:layout_below="@id/code"
+        />
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/secretKey"
+        android:hint=" Enter yout secret number :"
+        android:inputType="number"
+        android:layout_below="@id/id"
+        />
+
+
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/password"
+        android:hint=" Enter your password : "
+        android:layout_below="@id/secretKey"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/questionTV"
+        android:text="Are your student or professor ?!"
+        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        />
+    <RadioGroup
+        android:layout_centerHorizontal="true"
+        android:id="@+id/studentOrProfessor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/questionTV"
+        android:layout_margin="5dp">
+
+        <RadioButton
+
+            android:id="@+id/student"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:text="Student"/>
+        <RadioButton
+            android:id="@+id/professor"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:text="Professor"/>
+    </RadioGroup>
+    <Button
+        style="@style/Button"
+        android:id="@+id/register"
+        android:text="Register"
+        android:textColor="#fafafa"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/studentOrProfessor"
+
+        />
+
+
+
+</RelativeLayout>
